@@ -1,0 +1,39 @@
+.box {
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Animação ao entrar no hover */
+  .box:hover {
+    animation-name: rotateForward;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+  }
+
+  /* Animação ao sair do hover */
+  .box:not(:hover) {
+    animation-name: rotateBackward;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    /* animation-direction: reverse; */
+  }
+  
+  @keyframes rotateForward {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotateBackward {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }

@@ -1,0 +1,84 @@
+.ItemMove {
+    width: 100%;
+    height: 100vh;
+    background-color: #1d1d1d;
+
+
+    & .NavBar {
+        background-color: rgb(47, 47, 255);
+
+        & button {
+            width: 100px;
+            height: 50px;
+            background-color: azure;
+            margin: 10px;
+        }
+    }
+
+    & .AreaMove {
+        flex: 1;
+        /* height: 100%; */
+        /* overflow: hidden; */
+        height: calc(100vh - 70px);
+
+        display: flex;
+        align-items: center;
+
+
+
+        & .Move {
+            margin-left: 20px;
+            height: 600px;
+            width: 300px;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            /* animation: MoveLeftToRight .6s ease-out forwards; */
+        }
+
+        /* Classes de animação */
+        .slide-in {
+            animation: MoveLeftToRight 0.6s ease-out forwards;
+        }
+
+        .slide-out {
+            animation: MoveRightToLeft 0.6s ease-out forwards;
+        }
+
+        & .RestoTela {
+            margin-left: 20px;
+            height: 600px;
+            /* width: 100%; */
+            background-color: whitesmoke;
+            border-radius: 8px;
+
+            transition: width 0.6s ease;
+            flex: 1;
+            margin-right: 20px;
+        }
+
+    }
+}
+
+
+@keyframes MoveLeftToRight {
+    0%{
+        transform: translateX(-350px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX( 0px);
+        opacity: 1;
+    }
+}
+
+/* Animação para a saída da div */
+@keyframes MoveRightToLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-350px);
+        opacity: 0;
+    }
+}

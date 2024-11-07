@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Loading from './loanding/index.tsx';
+import Inicial from './Inicial/index.tsx';
+import LoadingSkeleton from './LoadingSkeleton/index.tsx';
+import LoadingSpinner from './LoadingSpinner/index.tsx';
+import LoadingSpinner2 from './LoadingSpinner2/index.tsx';
+import ItemMove from './ItemMove/index.tsx';
+import BoxGirando from './BoxGirando/index.tsx';
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"; //npm i react-router-dom
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+          <Routes>
+              <Route path="/" element={<Inicial/>} />
+              <Route path="/loading" element={<Loading/>} />
+              <Route path="/loading-skeleton" element={<LoadingSkeleton/>} />
+              <Route path="/loading-spinner" element={<LoadingSpinner/>} />
+              <Route path="/loading-spinner2" element={<LoadingSpinner2/>} />
+              <Route path="/ItemMove" element={<ItemMove/>} />
+              <Route path="/BoxGirando" element={<BoxGirando/>} />
+          </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
