@@ -3,7 +3,6 @@
     height: 100vh;
     background-color: #1d1d1d;
 
-
     & .NavBar {
         background-color: rgb(47, 47, 255);
 
@@ -17,68 +16,54 @@
 
     & .AreaMove {
         flex: 1;
-        /* height: 100%; */
-        /* overflow: hidden; */
         height: calc(100vh - 70px);
-
+        width: 100%;
         display: flex;
         align-items: center;
-
-
+        overflow: hidden;
 
         & .Move {
-            margin-left: 20px;
+            /* margin-left: 20px; */
             height: 600px;
             width: 300px;
             background-color: whitesmoke;
             border-radius: 8px;
+            margin-left: -300px;
             /* animation: MoveLeftToRight .6s ease-out forwards; */
+            transition: all 0.5s ease;
         }
 
-        /* Classes de animação */
-        .slide-in {
-            animation: MoveLeftToRight 0.6s ease-out forwards;
+        & .Move.ativo {
+            margin-left: 20px;
         }
 
-        .slide-out {
-            animation: MoveRightToLeft 0.6s ease-out forwards;
+        & .Move2 {
+            /* margin-left: 20px; */
+            height: 600px;
+            width: 300px;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            margin-right: -300px;
+            /* animation: MoveLeftToRight .6s ease-out forwards; */
+            transition: all 0.5s ease;
+        }
+
+        & .Move2.ativo {
+            margin-right: 20px;
+            transition: all 5.5s ease;
         }
 
         & .RestoTela {
-            margin-left: 20px;
+            /* margin-left: 20px; */
             height: 600px;
-            /* width: 100%; */
+            width: 100%;
             background-color: whitesmoke;
             border-radius: 8px;
 
             transition: width 0.6s ease;
             flex: 1;
-            margin-right: 20px;
+            /* margin-right: 20px; */
+            margin: 0px 20px;
         }
-
-    }
-}
-
-
-@keyframes MoveLeftToRight {
-    0%{
-        transform: translateX(-350px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX( 0px);
-        opacity: 1;
-    }
-}
-
-/* Animação para a saída da div */
-@keyframes MoveRightToLeft {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-350px);
-        opacity: 0;
     }
 }
