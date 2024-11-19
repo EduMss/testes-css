@@ -8,6 +8,7 @@ function Inicial() {
         <div style={{display: 'flex', flexDirection: 'column'}}>
             <h1>Pagina Inicial</h1>
             <Link to={`/loading`}>Loading</Link>
+            <Link to={`/MenuAnimado`}>MenuAnimado</Link>
             <Link to={`/loading-skeleton`}>Loading-skeleton</Link>
             <Link to={`/loading-spinner`}>loading-spinner</Link>
             <Link to={`/loading-spinner2`}>loading-spinner2</Link>
