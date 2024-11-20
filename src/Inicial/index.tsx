@@ -15,6 +15,7 @@ function Inicial() {
             <Link to={`/ItemMove`}>ItemMove</Link>
             <Link to={`/BoxGirando`}>BoxGirando</Link>
             <Link to={`/Login1`}>Login1</Link>
+            <Link to={`/DragAndDrop`}>DragAndDrop</Link>
         </div>
     );
   }
