@@ -1,5 +1,5 @@
 import "./DragAndDrop.css"
-import React, {useState, useRef, useEffect} from "react"
+import React, {useState, useRef} from "react"
 import { Cordenadas } from "./interface"
 import Item from "./Item.tsx"
 

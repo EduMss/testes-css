@@ -1,0 +1,31 @@
+h1 {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.795);
+    margin-left: 25px;
+}
+
+.Item-Pag-Inicial{
+    background-color: rgb(121, 121, 121);
+    padding: 10px;
+    margin: 10px;
+    margin-left: 20px;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px black;
+    border: solid 3px rgba(0, 0, 0, 0.219);
+    position: relative; /* Necessário para a criação do efeito de sombra */
+    box-shadow: 
+      0 0 0 3px rgba(0, 0, 0, 0.219), /* Borda escura mais externa */
+      0 0 0 5px rgba(0, 0, 0, 0.1);   /* Borda interna mais clara */
+}
+
+
+.Item-Pag-Inicial .Link-ItemPag-Inicial{
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.Item-Pag-Inicial .Link-ItemPag-Inicial:hover{
+    color: rgb(145, 145, 145);
+    text-decoration: underline;
+}
