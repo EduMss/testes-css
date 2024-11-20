@@ -14,6 +14,7 @@ function Inicial() {
             <Link to={`/loading-spinner2`}>loading-spinner2</Link>
             <Link to={`/ItemMove`}>ItemMove</Link>
             <Link to={`/BoxGirando`}>BoxGirando</Link>
+            <Link to={`/Login1`}>Login1</Link>
         </div>
     );
   }

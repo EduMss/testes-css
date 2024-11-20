@@ -7,6 +7,7 @@ import LoadingSpinner2 from './LoadingSpinner2/index.tsx';
 import ItemMove from './ItemMove/index.tsx';
 import BoxGirando from './BoxGirando/index.tsx';
 import MenuAnimado from './Menu Animado/index.tsx';
+import Login from './Login1/index.tsx';
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"; //npm i react-router-dom
 
@@ -23,6 +24,7 @@ function App() {
               <Route path="/loading-spinner2" element={<LoadingSpinner2/>} />
               <Route path="/ItemMove" element={<ItemMove/>} />
               <Route path="/BoxGirando" element={<BoxGirando/>} />
+              <Route path="/Login1" element={<Login/>} />
           </Routes>
       </div>
     </BrowserRouter>

@@ -1,0 +1,152 @@
+:root{
+    --font--color: whitesmoke;
+    --font--color--secondary: #afafaf;
+    --color--select--input: rgb(255, 0, 255) ;
+    --color--button: rgba(255, 0, 170, 0.61);
+    --color--button--select: rgba(255, 0, 170);
+}
+
+.Login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: blue; */
+    background: url("./img/galaxia.jpg") no-repeat;
+}
+
+.Login form {
+    /* position: relative; */
+    width: 550px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    backdrop-filter: blur(15px);
+    border-radius: 40px;
+    border: solid 3px rgba(0, 0, 0, 0.158);
+}
+  
+.Login form h1 {
+    color: whitesmoke;
+    font-size: 40px;
+    margin-left: calc(50% - 50px);
+    /* margin-top: -2px; */
+    padding-bottom: 25px;
+    text-shadow: 0 0 8px rgba(245, 245, 245, 0.5);
+
+}
+
+.input-Box {
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.input-Box .icone {
+    position: absolute;
+    left: 35px;
+    top: 0;
+    font-size: 24px;
+    color: var(--font--color);
+    transition: all 0.3s ease-in-out;
+}
+
+.input-Box .icone-view {
+    position: absolute;
+    right: 45px;
+    top: 0;
+    font-size: 24px;
+    color: var(--font--color);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+  
+.input-Box input {
+    width: 80%;
+    padding: 10px 10px 10px 40px; /* Espaço para ícone */
+    font-size: 16px;
+    border: none; 
+    border-bottom: 2px solid var(--font--color); 
+    outline: none; 
+    background-color: transparent;
+    margin-left: 5%;
+    transition: all 0.5s ease;
+}
+  
+.input-Box label {
+    position: absolute;
+    top: 3px;
+    left: 65px;
+    font-size: 20px;
+    color: var(--font--color--secondary);
+    pointer-events: none; /* Faz com que o clique não afete o label */
+    transition: all 0.3s ease-in-out;
+}
+  
+/* Quando o input está focado ou preenchido */
+.input-Box input:focus~label,
+.input-Box input:valid~label {
+    top: -20px;
+    font-size: 12px;
+    color: var(--color--select--input);
+}
+
+/* Quando o input está focado ou preenchido */
+.input-Box input:focus~span,
+.input-Box input:valid~span {
+    color: var(--color--select--input);
+}
+
+.input-Box input:focus, 
+.input-Box input:valid {
+    border-bottom: 2px solid var(--color--select--input);
+}
+
+
+.remember-forgot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 30px;
+}
+
+.remember-forgot {
+    color: var(--font--color);
+}
+
+.remember-forgot a {
+    color: var(--font--color);
+    font-weight: bold;
+}
+
+.register-link {
+    color: var(--font--color);
+    margin: 10px 30px;
+}
+
+.register-link a {    
+    margin-left: 7px;
+    color: var(--font--color);
+    font-weight: bold;
+    
+}
+
+.Login form button {
+    color: #ffffff;
+    background-color: var(--color--button);
+    padding: 20px 0px;
+    margin: 10px 20px 0px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+
+.Login form button:hover {
+    background-color: var(--color--button--select);
+    text-shadow: 0 0 3px rgb(255, 255, 255);
+}
